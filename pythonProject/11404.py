@@ -17,7 +17,7 @@ for _ in range(m):
 # 단계 3: 플로이드-워셜 알고리즘 적용
 for k in range(n):     # 각 중간 정점에 대해,
     for i in range(n):     # 각 시작 정점에서,
-        for j in range(n):     # 각 종료 정점까지,
+        for j in range(n):     # 각 종료 정점까지
             if costs[i][j] > costs[i][k] + costs[k][j]:
                 costs[i][j] = costs[i][k] + costs[k][j]
 
@@ -28,4 +28,5 @@ for row in costs:
             print(0, end=' ')   # i에서 j로 갈 수 없는 경우에는 그 자리에 '0' 출력.
         else:
             print(cost, end=' ')   # i에서 j로 가는데 필요한 최소 비용 출력.
-    print()
+
+#플로이드–워셜
